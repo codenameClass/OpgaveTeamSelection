@@ -21,7 +21,7 @@ namespace OpgaveTeamSelection
             if (rugNummerInput && ratingInput && capsInput)
                 return new Speler(naam, rugNummer, rating, caps);
             else
-                return null //TODO throw new Exception();
+                return null; //TODO throw new Exception();
         }
     }
 }
