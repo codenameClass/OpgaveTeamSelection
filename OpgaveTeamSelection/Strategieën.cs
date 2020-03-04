@@ -4,7 +4,8 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    class Strategieën
+    enum Strategieën
     {
+        Standaard,Best,Rotatie
     }
 }
