@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace OpgaveTeamSelection
@@ -8,7 +9,6 @@ namespace OpgaveTeamSelection
     {
         public static Selectie VulSelectieOp(int aantalDefenders, int aantalMidfielders, int aantalForwards, List<Speler> spelers, IStrategie strategie)
         {
-
             for (int x = 0; x < spelers.Count - 1; x++)
             {
                 int ind = x;
@@ -56,6 +56,30 @@ namespace OpgaveTeamSelection
             } while (defenders.Count != aantalDefenders && midfielders.Count != aantalMidfielders && forwards.Count != aantalForwards && goalkeeper.Count != 1);
 
             return new Selectie(defenders, midfielders, forwards, goalkeeper, strategie.AanvoerderVoorwaarde.SelectAanvoerder(geselecteerdeSpelers));
+        }
+    }
+
+
+    public class MyComparer : IComparer<Object>
+    {
+
+        public int Compare(Object stringA, Object stringB)
+        {
+            String[] valueA = stringA.ToString().Split('/');
+            String[] valueB = stringB.ToString().Split('/');
+
+            if (valueA.Length != 2 || valueB.Length != 2)
+                return String.Compare(stringA.ToString(), stringB.ToString());
+
+            if (valueA[0] == valueB[0])
+            {
+                return String.Compare(valueA[1], valueB[1]);
+            }
+            else
+            {
+                return String.Compare(valueA[0], valueB[0]);
+            }
+
         }
     }
 }
