@@ -11,5 +11,14 @@ namespace OpgaveTeamSelection
             MogenlijkePosities = posities.ToList();
         }
         List<MidFielderPosities> MogenlijkePosities { get; set; }
+        public override string ToString()
+        {
+            string temp="";
+            foreach(MidFielderPosities entry in MogenlijkePosities)
+            {
+                temp += entry + " ";
+            }
+            return ($"{this.GetType().Name} - {Naam},{RugNummer} [Positions: ] - Rating {Rating}, Caps {Caps}");
+        }
     }
 }
