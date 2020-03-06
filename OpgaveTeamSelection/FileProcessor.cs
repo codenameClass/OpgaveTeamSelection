@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace OpgaveTeamSelection
 {
@@ -11,26 +12,40 @@ namespace OpgaveTeamSelection
 
         public string source { get; set; }
 
-        public static void ReadFile()
+        public static List<string> ReadFile(string path)
         {
-            bool result = false;
-            try
+            Console.WriteLine("De file wordt ingelezen");
+
+            List<string> lijnen = new List<string>();
+            using (StreamReader sr = File.OpenText(path))
             {
-                // een bestand inlezen. 
-                using (StreamReader sr = new StreamReader(this.fileName))
+                string input = null;
+                while ((input = sr.ReadLine()) != null)
                 {
-                    // Lees tot het einde van het bestand
-                    this.text = sr.ReadToEnd();
-                    this.melding = String.Format("bestandlezen: ", this.source);
-                    result = true;
+                    lijnen.Add(input);
                 }
             }
-            catch (Exception e)
-            {
-                // foutieve melding             
-                this.melding = $"Kan het bestand {this.source} niet inlezen.\nFoutmelding {e.Message}.";
-            }
-            return result;
+
+            return lijnen;
+
+
+
+            //try
+            //{
+            //    // een bestand inlezen. 
+            //    using (StreamReader sr = new StreamReader(this.fileName))
+            //    {
+            //        // Lees tot het einde van het bestand
+            //        this.text = sr.ReadToEnd();
+            //        this.melding = String.Format("bestandlezen: ", this.source);
+            //        result = true;
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    // foutieve melding             
+            //    this.melding = $"Kan het bestand {this.source} niet inlezen.\nFoutmelding {e.Message}.";
+            //}
         }
 
     }
