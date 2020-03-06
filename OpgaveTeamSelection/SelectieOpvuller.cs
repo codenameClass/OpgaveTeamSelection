@@ -28,30 +28,34 @@ namespace OpgaveTeamSelection
             List<GoalKeeper> goalkeeper = new List<GoalKeeper>();
 
             int index = 0;
-
+            List<Speler> geselecteerdeSpelers = new List<Speler>();
             do
             {
                 if (spelers[index] is Defender && defenders.Count < aantalDefenders)
                 {
                     defenders.Add(spelers[index] as Defender);
+                    geselecteerdeSpelers.Add(spelers[index]);
                 }
                 else if (spelers[index] is MidFielder && midfielders.Count < aantalMidfielders)
                 {
                     midfielders.Add(spelers[index] as MidFielder);
+                    geselecteerdeSpelers.Add(spelers[index]);
                 }
                 else if (spelers[index] is Forward && forwards.Count < aantalForwards)
                 {
                     forwards.Add(spelers[index] as Forward);
+                    geselecteerdeSpelers.Add(spelers[index]);
                 }
                 else if (spelers[index] is GoalKeeper && goalkeeper.Count < 1)
                 {
                     goalkeeper.Add(spelers[index] as GoalKeeper);
+                    geselecteerdeSpelers.Add(spelers[index]);
                 }
 
                 index++;
             } while (defenders.Count != aantalDefenders && midfielders.Count != aantalMidfielders && forwards.Count != aantalForwards && goalkeeper.Count != 1);
 
-            return new Selectie(defenders, midfielders, forwards, goalkeeper, spelers[0]);
+            return new Selectie(defenders, midfielders, forwards, goalkeeper, strategie.AanvoerderVoorwaarde.SelectAanvoerder(geselecteerdeSpelers));
         }
     }
 }

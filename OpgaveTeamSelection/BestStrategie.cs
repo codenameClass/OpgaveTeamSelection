@@ -4,11 +4,12 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    public class BestStrategie
+    public class BestStrategie : IStrategie
     {
         public bool ZoekVoorwaarde(Speler huidige, Speler vergelijking)
         {
             return (huidige.Rating < vergelijking.Rating);
         }
+        public IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; } = new AanvoerderHoogsteRating();
     }
 }

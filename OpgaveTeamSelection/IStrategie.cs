@@ -8,7 +8,7 @@ namespace OpgaveTeamSelection
     {
         bool ZoekVoorwaarde(Speler huidige, Speler vergelijking);
 
-
+        IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; }
 
     }
 }

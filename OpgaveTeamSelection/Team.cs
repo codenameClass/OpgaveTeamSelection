@@ -11,6 +11,7 @@ namespace OpgaveTeamSelection
 
         public Selectie SelectieAanmaken(int aantalDefenders, int aantalMidfielders, int aantalForwards, IStrategie strategie)
         {
+            //Hier trycatch voor aantal spelers moet 11 zijn. 
              return SelectieOpvuller.VulSelectieOp(aantalDefenders,aantalMidfielders, aantalForwards, Spelers, strategie);
 
         }

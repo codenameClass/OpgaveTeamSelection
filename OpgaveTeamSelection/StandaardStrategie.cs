@@ -11,5 +11,6 @@ namespace OpgaveTeamSelection
             return (huidige.Caps < vergelijking.Caps);
         }
 
+        public IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; } = new AanvoerderHoogsteCaps();
     }
 }
