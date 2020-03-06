@@ -20,7 +20,7 @@ namespace OpgaveTeamSelection
             bool rugNummerInput = int.TryParse(data[1],out rugNummer) && rugNummer > 0 && rugNummer <= 99;
             bool ratingInput = int.TryParse(data[2], out rating) && rating >= 0 && rating <= 100;
             bool capsInput = int.TryParse(data[3], out caps) && caps >= 0;
-            List<bool> validationLogs = new List<bool>() { rugNummerInput, ratingInput, capsInput };
+            List<bool> validationLogs = new List<bool>() { true, rugNummerInput, ratingInput, capsInput };
 
             //Return
             if (!validationLogs.Contains(false))
