@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    enum GoalKeeperPosities
+    public enum GoalKeeperPosities
     {
         GoalKeeper
     }

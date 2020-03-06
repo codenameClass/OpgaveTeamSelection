@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    class PlayerFactory : IPlayerFactory
+    public class PlayerFactory : IPlayerFactory
     {
         public Team Team { get; set; }
 

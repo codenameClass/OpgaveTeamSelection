@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    class Speler : ISpeler
+    public class Speler : ISpeler
     {   public Speler(string naam,int rugNummer,int rating,int caps)
         {
             Naam = naam;

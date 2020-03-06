@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    enum DefenderPosities
+    public enum DefenderPosities
     {
         CentralDefence,Rightback,LeftBack
     }

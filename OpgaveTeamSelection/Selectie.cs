@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    class Selectie
+    public class Selectie
     {
         public Selectie(List<Defender> defenders,List<MidFielder> midfielders,List<Forward>forwards,List<GoalKeeper> goalKeepers,Speler aanvoerder)
         {

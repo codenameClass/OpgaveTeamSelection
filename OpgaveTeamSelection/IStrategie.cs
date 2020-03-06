@@ -4,7 +4,13 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    public interface IPlayerFactory
+    public interface IStrategie
     {
+        Selectie MaakSelectie()
+        {
+
+        }
+
+
     }
 }

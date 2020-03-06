@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    class FileProcessor
+    public class FileProcessor
     {
         //bestandlezen
         //per team playerfactory

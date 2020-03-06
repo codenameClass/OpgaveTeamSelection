@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    class IDataReader
+    public interface IDataReader
     {
     }
 }

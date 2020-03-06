@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    class ISpeler
+    public interface ISpeler
     {
         public string Naam { get; set; }
     }
