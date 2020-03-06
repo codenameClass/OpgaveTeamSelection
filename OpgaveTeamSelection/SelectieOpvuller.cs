@@ -6,8 +6,22 @@ namespace OpgaveTeamSelection
 {
     public class SelectieOpvuller
     {
-        public static Selectie VulSelectieOp(int aantalDefenders, int aantalMidfielders, int aantalForwards, List<Speler> spelers)
+        public static Selectie VulSelectieOp(int aantalDefenders, int aantalMidfielders, int aantalForwards, List<Speler> spelers, IStrategie strategie)
         {
+
+            for (int x = 0; x < spelers.Count - 1; x++)
+            {
+                int ind = x;
+                for (int i = x + 1; i < spelers.Count; i++)
+                {
+                    if (strategie.ZoekVoorwaarde(spelers[ind], spelers[i]))
+                        ind = i;
+                }
+                Speler tussenwaarde = spelers[x];
+                spelers[x] = spelers[ind];
+                spelers[ind] = tussenwaarde;
+            }
+
             List<Defender> defenders = new List<Defender>();
             List<MidFielder> midfielders = new List<MidFielder>();
             List<Forward> forwards = new List<Forward>();

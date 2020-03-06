@@ -6,7 +6,9 @@ namespace OpgaveTeamSelection
 {
     public interface IStrategie
     {
-        Selectie MaakSelectie(int aantalDefenders, int aantalMidfielders, int aantalForwarders, List<Speler> spelers);
+        bool ZoekVoorwaarde(Speler huidige, Speler vergelijking);
+
+
 
     }
 }

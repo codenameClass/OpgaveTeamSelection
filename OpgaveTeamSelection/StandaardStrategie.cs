@@ -6,23 +6,10 @@ namespace OpgaveTeamSelection
 {
     public class StandaardStrategie : IStrategie
     {
-        public Selectie MaakSelectie(int aantalDefenders, int aantalMidfielders, int aantalForwards, List<Speler> spelers)
+        public bool ZoekVoorwaarde(Speler huidige, Speler vergelijking)
         {
-            
-            for(int x=0; x<spelers.Count-1; x++)
-            {
-                int ind = x;
-                for(int i = x+1; i < spelers.Count; i++)
-                {
-                    if (spelers[ind].Caps < spelers[i].Caps)
-                        ind = i;
-                }
-                Speler tussenwaarde = spelers[x];
-                spelers[x] = spelers[ind];
-                spelers[ind] = tussenwaarde;
-            }
-
-            return SelectieOpvuller.VulSelectieOp(aantalDefenders, aantalMidfielders, aantalForwards, spelers);
+            return (huidige.Caps < vergelijking.Caps);
         }
+
     }
 }

@@ -9,11 +9,12 @@ namespace OpgaveTeamSelection
         public List<Speler> Spelers { get; set; }
         public string TeamNaam { get; set; }
 
-        public Selectie SelectieAanmaken(int aantalDefenders, int aantalMidfielders, int aantalForwarders, IStrategie strategie)
+        public Selectie SelectieAanmaken(int aantalDefenders, int aantalMidfielders, int aantalForwards, IStrategie strategie)
         {
-             return strategie.MaakSelectie();
+             return SelectieOpvuller.VulSelectieOp(aantalDefenders,aantalMidfielders, aantalForwards, Spelers, strategie);
 
         }
+        
         public void VoegSpelerToe(Speler speler)
         {
             //Momenteel werken we met 1 team, later nog een exception throwen als de speler zich al in een team bevindt.
