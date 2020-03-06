@@ -4,29 +4,14 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    class Team
+    public class Team
     {
         public List<Speler> Spelers { get; set; }
         public string TeamNaam { get; set; }
 
-        public Selectie SelectieAanmaken(int aantalDefenders, int aantalMidfielders, int aantalForwarders, Strategieën strategie)
+        public Selectie SelectieAanmaken(int aantalDefenders, int aantalMidfielders, int aantalForwarders, IStrategie strategie)
         {
-            if (strategie == Strategieën.Standaard)
-            {
-
-            }
-            else if (strategie == Strategieën.Rotatie)
-            {
-
-            }
-            else if (strategie == Strategieën.Best)
-            {
-
-            }
-            else
-            {
-                //hier exception gooien dat de strategie niet klopt.
-            }
+             return strategie.MaakSelectie();
 
         }
         public void VoegSpelerToe(Speler speler)

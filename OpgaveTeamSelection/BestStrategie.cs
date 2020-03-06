@@ -4,13 +4,10 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    public class StandaardStrategie : IStrategie
+    public class BestStrategie
     {
         Selectie MaakSelectie(int aantalDefenders, int aantalMidfielders, int aantalForwarders, List<Speler> spelers)
         {
-
-
-
 
         }
     }
