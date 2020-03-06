@@ -7,10 +7,6 @@ namespace OpgaveTeamSelection
 {
     public class FileProcessor
     {
-        //bestandlezen
-        //per team playerfactory
-
-        public string source { get; set; }
 
         public static List<string> ReadFile(string path)
         {
