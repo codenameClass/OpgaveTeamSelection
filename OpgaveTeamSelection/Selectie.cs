@@ -1,26 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace OpgaveTeamSelection
 {
     public class Selectie
     {
-        public Selectie(List<Defender> defenders,List<MidFielder> midfielders,List<Forward>forwards,List<GoalKeeper> goalKeepers,Speler aanvoerder)
-        {
-            if ((defenders.Count + midfielders.Count + forwards.Count + goalKeepers.Count) != 11)
-                throw new ArgumentException("Het SpelerAantal is niet gelijk aan 11");
-            Defenders = defenders;
-            MidFielders = midfielders;
-            Forwards = forwards;
-            GoalKeeper = goalKeepers;
-            Aanvoerder = aanvoerder;
-        }
         public Speler Aanvoerder { get; set; }
         public List<Defender> Defenders { get; set; }
         public List<MidFielder> MidFielders { get; set; }
         public List<Forward> Forwards { get; set; }
         public List<GoalKeeper> GoalKeeper { get; set; }
+
+        public Selectie(List<Speler> geselecteerdeSpelers, Speler aanvoerder)
+        {
+            if(geselecteerdeSpelers.Count != 11) throw new ArgumentException("Het SpelerAantal is niet gelijk aan 11");
+
+            Defenders = geselecteerdeSpelers.Where(s => s is Defender).Select(s => (Defender)s).ToList();
+            MidFielders = geselecteerdeSpelers.Where(s => s is MidFielder).Select(s => (MidFielder)s).ToList();
+            Forwards = geselecteerdeSpelers.Where(s => s is Forward).Select(s => (Forward)s).ToList();
+            GoalKeeper = geselecteerdeSpelers.Where(s => s is GoalKeeper).Select(s => (GoalKeeper)s).ToList();
+            Aanvoerder = aanvoerder;
+        }
+        
         public void PrintSelectie()
         {
             foreach (Defender defender in Defenders)
