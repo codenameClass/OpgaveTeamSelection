@@ -6,6 +6,6 @@ namespace OpgaveTeamSelection
 {
     public enum DefenderPosities
     {
-        CentralDefence,Rightback,LeftBack
+        CentralDefence,RightBack,LeftBack
     }
 }

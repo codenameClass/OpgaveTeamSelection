@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace OpgaveTeamSelection
@@ -29,23 +30,36 @@ namespace OpgaveTeamSelection
                     List<GoalKeeperPosities> temp = new List<GoalKeeperPosities>();
                     for(int i = 3; i < data.Length - 2; i++)
                     {
-                        temp.Add(data[i])
+                        temp.Add((GoalKeeperPosities) Enum.Parse(typeof(GoalKeeperPosities), data[i]));
                     }
-                    return new GoalKeeper(naam, rugNummer, rating, caps);
+                    return new GoalKeeper(naam, rugNummer, rating, caps,temp);
                 }
                 else if (data[0] == "Forward")
                 {
-
+                    List<ForwardPosities> temp = new List<ForwardPosities>();
+                    for (int i = 3; i < data.Length - 2; i++)
+                    {
+                        temp.Add((ForwardPosities)Enum.Parse(typeof(ForwardPosities), data[i]));
+                    }
+                    return new Forward(naam, rugNummer, rating, caps, temp);
                 }
-
                 else if (data[0] == "MidFielder")
                 {
-
+                    List<MidFielderPosities> temp = new List<MidFielderPosities>();
+                    for (int i = 3; i < data.Length - 2; i++)
+                    {
+                        temp.Add((MidFielderPosities)Enum.Parse(typeof(MidFielderPosities), data[i]));
+                    }
+                    return new MidFielder(naam, rugNummer, rating, caps, temp);
                 }
-
-                else if (data[0] == "Defender")
+                else
                 {
-
+                    List<DefenderPosities> temp = new List<DefenderPosities>();
+                    for (int i = 3; i < data.Length - 2; i++)
+                    {
+                        temp.Add((DefenderPosities)Enum.Parse(typeof(DefenderPosities), data[i]));
+                    }
+                    return new Defender(naam, rugNummer, rating, caps, temp);
                 }
             }
             else
