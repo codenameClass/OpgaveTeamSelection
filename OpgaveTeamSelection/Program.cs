@@ -6,8 +6,8 @@ namespace OpgaveTeamSelection
     public class Program
     {
         static void Main(string[] args)
-        {
-            List<string> lijnen = FileProcessor.ReadFile(@"C:\TeamOpdracht\rodeDuivels.txt");
+        {   List<string> lijnen = FileProcessor.ReadFile(@"D:\Programmeren Data en Bestanden\rodeDuivels.txt");     //Sven desktop locatie
+            //List<string> lijnen = FileProcessor.ReadFile(@"C:\TeamOpdracht\rodeDuivels.txt");             //sven laptop locatie
             Team team = new Team();
             team.TeamNaam = "Rode Duivels";
             IPlayerFactory pf = new PlayerFactory(team);
@@ -15,7 +15,8 @@ namespace OpgaveTeamSelection
             {
                 pf.MaakSpeler(lijn);
             }
-            team.SelectieAanmaken(4, 4, 2, new BestStrategie());
+            Selectie selectie1 = team.SelectieAanmaken(4, 4, 2, new BestStrategie());
+            selectie1.PrintSelectie();
 
         }
     }
