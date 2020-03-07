@@ -18,7 +18,7 @@ namespace OpgaveTeamSelection
             {
                 temp += entry + " ";
             }
-            return ($"{this.GetType().Name} - {Naam},{RugNummer} [Positions: ] - Rating {Rating}, Caps {Caps}");
+            return ($"{this.GetType().Name} - {Naam},{RugNummer} [Positions:{temp}] - Rating {Rating}, Caps {Caps}");
         }
     }
 }

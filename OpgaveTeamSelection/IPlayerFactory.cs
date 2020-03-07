@@ -6,5 +6,6 @@ namespace OpgaveTeamSelection
 {
     public interface IPlayerFactory
     {
+        public Speler MaakSpeler(string spelerInfo);
     }
 }
