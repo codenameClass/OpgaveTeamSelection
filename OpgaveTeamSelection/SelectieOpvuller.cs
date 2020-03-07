@@ -59,7 +59,7 @@ namespace OpgaveTeamSelection
                     goalkeeperCounter++;
                 }
                 index++;
-            } while (defenderCounter != aantalDefenders && midfielderCounter != aantalMidfielders && fowardCounter != aantalForwards && goalkeeperCounter != 1);
+            } while (defenderCounter != aantalDefenders || midfielderCounter != aantalMidfielders || fowardCounter != aantalForwards || goalkeeperCounter != 1);
 
             return geselecteerdeSpelers;
         }
