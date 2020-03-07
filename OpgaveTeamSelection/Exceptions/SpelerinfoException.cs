@@ -5,7 +5,7 @@ namespace OpgaveTeamSelection
 {
     public class SpelerinfoException : Exception
     {
-        public List<bool> Logs { get; set; }
-        public SpelerinfoException(string message, List<bool> log) : base(message) => Logs = log;
+        public Dictionary<string, bool> Logs { get; set; }
+        public SpelerinfoException(string message, Dictionary<string,bool> log) : base(message) => Logs = log;
     }
 }
