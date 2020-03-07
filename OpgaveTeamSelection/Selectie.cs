@@ -8,6 +8,7 @@ namespace OpgaveTeamSelection
     public class Selectie
     {
         public Speler Aanvoerder { get; set; }
+        public List<Speler> GeselecteerdeSpelers => (new List<Speler>()).Union(Defenders).Union(MidFielders).Union(Forwards).Union(GoalKeeper).ToList();
         public List<Defender> Defenders { get; set; }
         public List<MidFielder> MidFielders { get; set; }
         public List<Forward> Forwards { get; set; }
