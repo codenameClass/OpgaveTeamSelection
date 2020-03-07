@@ -6,7 +6,7 @@ namespace OpgaveTeamSelection
 {
     public class Team
     {
-        public List<Speler> Spelers { get; set; }
+        public List<Speler> Spelers { get; set; } = new List<Speler>();
         public string TeamNaam { get; set; }
 
         public Selectie SelectieAanmaken(int aantalDefenders, int aantalMidfielders, int aantalForwards, IStrategie strategie)
