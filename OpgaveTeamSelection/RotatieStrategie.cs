@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    public class Rotatiestrategie : IStrategie
+    public class RotatieStrategie : IStrategie
     {
         public bool ZoekVoorwaarde(Speler huidige, Speler vergelijking)
         {

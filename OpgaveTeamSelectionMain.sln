@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29820.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpgaveTeamSelection", "OpgaveTeamSelection\OpgaveTeamSelection.csproj", "{6CA693F9-07AA-4CE0-AAE5-DD98D5CDD54A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpgaveTeamSelection", "OpgaveTeamSelection\OpgaveTeamSelection.csproj", "{6CA693F9-07AA-4CE0-AAE5-DD98D5CDD54A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ontwerp", "Ontwerp", "{E8C571D1-1928-454C-A293-162A2815B5ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ontwerp1", "Ontwerp1\Ontwerp1.csproj", "{2AA7025B-122A-47F1-BCD6-D9DFA29E91CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ontwerp1", "Ontwerp1\Ontwerp1.csproj", "{2AA7025B-122A-47F1-BCD6-D9DFA29E91CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7201E4E-2BFB-4782-AE5F-4E3D147426E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
