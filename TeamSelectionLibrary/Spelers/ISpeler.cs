@@ -6,5 +6,6 @@ namespace TeamSelectionLibrary
 {
     public interface ISpeler
     {
+        string Naam { get; set; }
     }
 }
