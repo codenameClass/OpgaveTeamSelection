@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace OpgaveTeamSelection
@@ -23,14 +24,22 @@ namespace OpgaveTeamSelection
             IPlayerFactory pf = new PlayerFactory(team);
 
             //Read
-            foreach(string lijn in lijnen)
-            {
-                team.VoegSpelerToe(pf.MaakSpeler(lijn));
-            }
+            foreach(string lijn in lijnen) team.VoegSpelerToe(pf.MaakSpeler(lijn));
 
             //Print
             Selectie selectie1 = team.SelectieAanmaken(4, 4, 2, new BestStrategie());
             selectie1.PrintSelectie();
+
+
+            //Test 1
+            Console.WriteLine("\n\n\ntest1");
+            var testje = team.Spelers.OrderBy(s => s, new JICapsComparer()).ToList();
+            foreach (var t in testje) Console.WriteLine(t);
+
+            //Test 2
+            Console.WriteLine("\n\n\ntest2");
+            var testje = team.Spelers.OrderBy(s => s, new JIRatingComparer()).ToList();
+            foreach (var t in testje) Console.WriteLine(t);
 
         }
     }

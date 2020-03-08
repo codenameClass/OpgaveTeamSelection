@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    public class Speler : ISpeler
+    public class Speler : ISpeler, IComparable, IComparable<Speler>
     {  
         public int RugNummer { get; set; }
         public string Naam { get; set; }
@@ -21,7 +22,22 @@ namespace OpgaveTeamSelection
             Caps = caps;
             Geblesseerd = false;
         }
-        
+
+        public int CompareTo(object obj)
+        {
+            if (obj is Speler) return CompareTo(obj as Speler);
+            else throw new ArgumentException($"Object must be of type {nameof(Speler)}.");
+        }
+        public int CompareTo(Speler andereSpeler)
+        {
+            if (!ReferenceEquals(andereSpeler, null))
+            {
+                int comparteTo = Naam.CompareTo(andereSpeler.Naam);
+                if (comparteTo == 0) comparteTo = RugNummer.CompareTo(andereSpeler.RugNummer);
+                return comparteTo;
+            }
+            else return +1;
+        }
         public override bool Equals(object obj)
         {
             if (obj is Speler)
@@ -37,5 +53,7 @@ namespace OpgaveTeamSelection
             else return false;
         }
         public override int GetHashCode() => Naam.GetHashCode() ^ RugNummer.ToString().GetHashCode();
+
+        
     }
 }
