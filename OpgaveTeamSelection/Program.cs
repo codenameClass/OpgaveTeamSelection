@@ -24,7 +24,7 @@ namespace OpgaveTeamSelection
             IPlayerFactory pf = new PlayerFactory();
 
             //Read
-            foreach(string lijn in lijnen) team.VoegSpelerToe(pf.MaakSpeler(lijn));
+            foreach (string lijn in lijnen) team.VoegSpelerToe(pf.MaakSpeler(lijn));
 
             //Print
             Selectie selectie1 = team.SelectieAanmaken(4, 4, 2, new BestStrategie());
