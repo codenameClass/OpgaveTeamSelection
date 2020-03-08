@@ -27,6 +27,8 @@ namespace OpgaveTeamSelection
         
         public void PrintSelectie()
         {
+            Console.WriteLine();
+            Console.WriteLine("************************************************");
             foreach(Speler s in GeselecteerdeSpelers)
             {
                 if(s == Aanvoerder)
@@ -37,6 +39,8 @@ namespace OpgaveTeamSelection
                 }
                 else Console.WriteLine(s);
             }
+            Console.WriteLine("************************************************");
+            Console.WriteLine();
         }
         //public void PrintSelectie()
         //{

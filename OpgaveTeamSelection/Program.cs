@@ -12,7 +12,7 @@ namespace OpgaveTeamSelection
         //static string path = @"C:\Users\jensi\source\repos\OpgaveTeamSelectionMain\OpgaveTeamSelection\Resources\rodeDuivels.txt";      // Jens solution locatie
         //static string path = @"D:\Programmeren Data en Bestanden\rodeDuivels.txt";                                                      // Sven desktop locatie
         //static string path = @"D:\Programmeren Data en Bestanden\rodeDuivels.txt";                                                      // Sven laptop locatie
-        //static string path = @"C:\Users\Sieglinde\OneDrive\voetbal\rodeDuivels.txt"                                                     // Sieglinde locatie 
+        //static string path = @"C:\Users\Sieglinde\OneDrive\voetbal\rodeDuivels.txt";                                                   // Sieglinde locatie 
 
         static void Main(string[] args)
         {

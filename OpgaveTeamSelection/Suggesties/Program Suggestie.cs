@@ -8,9 +8,9 @@ namespace OpgaveTeamSelection
 {
     public class Program2
     {
-        //static string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\rodeDuivels.txt"); // Solution (werkt voor iedereen)
+        static string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\rodeDuivels.txt"); // Solution (werkt voor iedereen)
         //static string path = @"C:\Users\jensi\source\repos\OpgaveTeamSelectionMain\OpgaveTeamSelection\Resources\rodeDuivels.txt";      // Jens solution locatie
-        static string path = @"D:\Programmeren Data en Bestanden\rodeDuivels.txt";                                                      // Sven desktop locatie
+        //static string path = @"D:\Programmeren Data en Bestanden\rodeDuivels.txt";                                                      // Sven desktop locatie
         //static string path = @"D:\Programmeren Data en Bestanden\rodeDuivels.txt";                                                      // Sven laptop locatie
         //static string path = @"C:\Users\Sieglinde\OneDrive\voetbal\rodeDuivels.txt"                                                     // Sieglinde locatie 
 
@@ -33,6 +33,11 @@ namespace OpgaveTeamSelection
                     //Print
                     Selectie selectie1 = team.SelectieAanmaken(4, 4, 2, new BestStrategie2());
                     selectie1.PrintSelectie();
+                    Selectie selectie2 = team.SelectieAanmaken(4, 4, 2, new RotatieStrategie());
+                    selectie2.PrintSelectie();
+                    Selectie selectie3 = team.SelectieAanmaken(4, 4, 2, new StandaardStrategie());
+                    selectie3.PrintSelectie();
+
                 }
                 else throw new ArgumentException("Incorrect File Path");
             }
