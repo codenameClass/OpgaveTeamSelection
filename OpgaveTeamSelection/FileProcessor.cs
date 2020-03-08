@@ -10,8 +10,6 @@ namespace OpgaveTeamSelection
 
         public static List<string> ReadFile(string path)
         {
-            Console.WriteLine("De file wordt ingelezen");
-
             List<string> lijnen = new List<string>();
             using (StreamReader sr = File.OpenText(path))
             {
