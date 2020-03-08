@@ -12,7 +12,7 @@ namespace OpgaveTeamSelection
             }
             catch(SpelerinfoException e)
             {
-                foreach (bool log in e.Logs) Console.WriteLine(log);
+                foreach (bool log in e.Logs.Values) Console.WriteLine(log);
             }
         }
     }

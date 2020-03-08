@@ -1,0 +1,22 @@
+GoalKeeper,Thibaut Courtois,1,GoalKeeper,92,85
+Forward,Romelu Lukaku,9,CentralForward,95,78
+MidFielder,Kevin De Bruyne,8,DefenceMidfield,RightMidfield,LeftMidfield,AttackingMidfield,92,80
+GoalKeeper,Koen Casteels,12,GoalKeeper,79,1
+Defender,Jan Vertongen,2,CentralDefence,LeftBack,82,101
+Defender,Toby Alderweireld,3,CentralDefence,RightBack,88,85
+Defender,Vincent Kompany,4,CentralDefence,90,75
+MidFielder,Youri Tielemans,7,DefenceMidfield,RightMidfield,LeftMidfield,AttackingMidfield,85,25
+MidFielder,Eden Hazard,10,RightMidfield,LeftMidfield,AttackingMidfield,94,97
+Forward,Benito Raman,21,CentralForward,LeftWinger,RightWinger,79,2
+MidFielder,Leander Dendoncker,6,DefenceMidfield,RightMidfield,LeftMidfield,AttackingMidfield,80,8
+Forward,Dries Mertens,18,CentralForward,LeftWinger,RightWinger,86,55
+Defender,Timothy Castagne,5,CentralDefence,RightBack,LeftBack,81,22
+Defender,Jason Denayer,51,CentralDefence,RightBack,LeftBack,79,14
+MidFielder,Yannick Carrasco,17,RightMidfield,LeftMidfield,78,46
+Forward,Leandro Trossard,22,CentralForward,LeftWinger,RightWinger,79,4
+Forward,Divock Origi,16,LeftWinger,RightWinger,74,30
+MidFielder,Denis Praet,31,RightMidfield,LeftMidfield,AttackingMidfield,89,6
+MidFielder,Sven Kums,32,RightMidfield,LeftMidfield,DefenceMidfield,77,1
+MidFielder,Axel Witsel,46,DefenceMidfield,90,88
+Defender,Thomas Meunier,33,RightBack,79,59
+Defender,Thomas Vermaelen,34,CentralDefence,LeftBack,83,57

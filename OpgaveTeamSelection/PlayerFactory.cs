@@ -65,7 +65,7 @@ namespace OpgaveTeamSelection
 
                     return new MidFielder(naam, rugNummer, rating, caps, temp);
                 }
-                else if (playerType == "Goalkeeper")
+                else if (playerType == "Defender")
                 {
                     List<DefenderPosities> temp = new List<DefenderPosities>();
                     for (int i = 3; i < data.Length - 2; i++)
