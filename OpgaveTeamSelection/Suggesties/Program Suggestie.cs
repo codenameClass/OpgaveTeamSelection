@@ -33,9 +33,9 @@ namespace OpgaveTeamSelection
                     //Print
                     Selectie selectie1 = team.SelectieAanmaken(4, 4, 2, new BestStrategie2());
                     selectie1.PrintSelectie();
-                    Selectie selectie2 = team.SelectieAanmaken(4, 4, 2, new RotatieStrategie());
+                    Selectie selectie2 = team.SelectieAanmaken(4, 4, 2, new RotatieStrategie2());
                     selectie2.PrintSelectie();
-                    Selectie selectie3 = team.SelectieAanmaken(4, 4, 2, new StandaardStrategie());
+                    Selectie selectie3 = team.SelectieAanmaken(4, 4, 2, new StandaardStrategie2());
                     selectie3.PrintSelectie();
 
                 }
