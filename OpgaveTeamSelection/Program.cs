@@ -9,7 +9,6 @@ namespace OpgaveTeamSelection
     public class Program
     {
         static string PATH = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\rodeDuivels.txt");
-
         static void Main(string[] args)
         {
             //Load
@@ -24,7 +23,18 @@ namespace OpgaveTeamSelection
                     IPlayerFactory pf = new PlayerFactory();
 
                     //Read
-                    foreach (string lijn in lijnen) team.VoegSpelerToe(pf.MaakSpeler(lijn));
+                    for(int i = 0; i < lijnen.Count; i++)
+                    {
+                        try
+                        {
+                            team.VoegSpelerToe(pf.MaakSpeler(lijnen[i]));
+                        }
+                        catch(SpelerinfoException e)
+                        {
+                            Console.WriteLine($"error op regel {i+1} van het bronbestand:");
+                            Console.WriteLine(e.Message);
+                        }
+                    }
 
                     //Print
                     Selectie selectie1 = team.SelectieAanmaken(4, 4, 2, new BestStrategie());
