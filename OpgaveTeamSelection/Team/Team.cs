@@ -12,7 +12,7 @@ namespace OpgaveTeamSelection
         public Selectie SelectieAanmaken(int aantalDefenders, int aantalMidfielders, int aantalForwards, Strategie strategie)
         {
             if (aantalDefenders + aantalForwards + aantalMidfielders == 10)
-                return SelectieOpvuller2.VulSelectieOp(aantalDefenders, aantalMidfielders, aantalForwards, Spelers, strategie);
+                return SelectieOpvuller.VulSelectieOp(aantalDefenders, aantalMidfielders, aantalForwards, Spelers, strategie);
             else throw new ArgumentException("De Opstelling Bestaat niet uit 11 Spelers");
 
         }
