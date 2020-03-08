@@ -145,13 +145,6 @@
       <FileName>AanvoerderVoorwaarden\IAanvoerderVoorwaarde.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="TeamSelectionLibrary.IDataReader">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FileProcessor\IDataReader.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="TeamSelectionLibrary.IPlayerFactory">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
