@@ -8,7 +8,7 @@ namespace OpgaveTeamSelection
         {
             try
             {
-                (new PlayerFactory(new Team())).MaakSpeler("test");
+                (new PlayerFactory()).MaakSpeler("test");
             }
             catch(SpelerinfoException e)
             {
