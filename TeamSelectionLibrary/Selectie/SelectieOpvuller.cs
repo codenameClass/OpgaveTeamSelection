@@ -7,7 +7,7 @@ namespace TeamSelectionLibrary
 {
     public class SelectieOpvuller
     {
-        public static Selectie VulSelectieOp(int aantalDefenders, int aantalMidfielders, int aantalForwards, List<Speler> spelers, Strategie strategie)
+        public static Selectie VulSelectieOp(int aantalDefenders, int aantalMidfielders, int aantalForwards, List<Speler> spelers, IStrategie strategie)
         {
             spelers.Sort(strategie);
             List<Speler> geselecteerdeSpelers = GetGeselecteerdeSpelers(aantalDefenders, aantalMidfielders, aantalForwards, spelers);

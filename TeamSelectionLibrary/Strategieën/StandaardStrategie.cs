@@ -4,9 +4,9 @@ using System.Text;
 
 namespace TeamSelectionLibrary
 {
-    public class StandaardStrategie : Strategie
+    public class StandaardStrategie : IStrategie
     {
-        public override int Compare(Speler x, Speler y)
+        public int Compare(Speler x, Speler y)
         {
             //Null is gelijk aan null...
             if (ReferenceEquals(x, null) && ReferenceEquals(y, null)) return 0;
@@ -18,6 +18,6 @@ namespace TeamSelectionLibrary
             return -(x.Rating.CompareTo(y.Rating));
         }
 
-        public override IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; } = new AanvoerderHoogsteCaps();
+        public IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; } = new AanvoerderHoogsteCaps();
     }
 }

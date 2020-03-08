@@ -4,9 +4,9 @@ using System.Text;
 
 namespace TeamSelectionLibrary
 {
-    public abstract class Strategie : Comparer<Speler>
+    public interface IStrategie : IComparer<Speler>
     {
-        public abstract IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; }
+        IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; }
 
     }
 }

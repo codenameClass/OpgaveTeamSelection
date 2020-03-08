@@ -13,7 +13,7 @@ namespace TeamSelectionLibrary
         public List<MidFielder> MidFielders { get; set; }
         public List<Forward> Forwards { get; set; }
         public List<GoalKeeper> GoalKeeper { get; set; }
-        public Strategie Strategie { get; set; }
+        public IStrategie Strategie { get; set; }
 
         public Selectie(List<Speler> geselecteerdeSpelers, Speler aanvoerder)
         {

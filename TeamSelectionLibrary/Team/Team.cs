@@ -9,7 +9,7 @@ namespace TeamSelectionLibrary
         public List<Speler> Spelers { get; set; } = new List<Speler>();
         public string TeamNaam { get; set; }
 
-        public Selectie SelectieAanmaken(int aantalDefenders, int aantalMidfielders, int aantalForwards, Strategie strategie)
+        public Selectie SelectieAanmaken(int aantalDefenders, int aantalMidfielders, int aantalForwards, IStrategie strategie)
         {
             if (aantalDefenders + aantalForwards + aantalMidfielders == 10)
                 return SelectieOpvuller.VulSelectieOp(aantalDefenders, aantalMidfielders, aantalForwards, Spelers, strategie);
