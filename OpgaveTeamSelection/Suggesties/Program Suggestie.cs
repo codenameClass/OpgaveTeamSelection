@@ -24,14 +24,14 @@ namespace OpgaveTeamSelection
                     List<string> lijnen = FileProcessor.ReadFile(path);
 
                     //Create
-                    Team team = new Team() { TeamNaam = "Rode Duivels" };
+                    Team2 team = new Team2() { TeamNaam = "Rode Duivels" };
                     IPlayerFactory pf = new PlayerFactory();
 
                     //Read
                     foreach (string lijn in lijnen) team.VoegSpelerToe(pf.MaakSpeler(lijn));
 
                     //Print
-                    Selectie selectie1 = team.SelectieAanmaken(4, 4, 2, new BestStrategie());
+                    Selectie selectie1 = team.SelectieAanmaken(4, 4, 2, new BestStrategie2());
                     selectie1.PrintSelectie();
                 }
                 else throw new ArgumentException("Incorrect File Path");
