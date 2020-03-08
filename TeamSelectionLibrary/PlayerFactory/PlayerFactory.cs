@@ -34,8 +34,8 @@ namespace TeamSelectionLibrary
             //Return
             if (!validationLogs.Values.Contains(false))
             {
-                try         //dit
-                {           //
+                try         
+                {           
                     if (playerType == "GoalKeeper")
                     {
                         List<GoalKeeperPosities> temp = new List<GoalKeeperPosities>();
@@ -77,12 +77,12 @@ namespace TeamSelectionLibrary
                         validationLogs.Add("playerTypeValidation", false);
                         validationLogs.Add("positionValidation", false);
                     }
-                }       // van hier
+                }   
                 catch (Exception e)
                 {
                     validationLogs.Add("positionValidation", false);
                     throw new SpelerinfoException("Er zitten fouten in de spelerInfo string.", validationLogs);
-                }                       //tot hier
+                }                       
             }
             throw new SpelerinfoException("Er zitten fouten in de spelerInfo string.", validationLogs);
         }

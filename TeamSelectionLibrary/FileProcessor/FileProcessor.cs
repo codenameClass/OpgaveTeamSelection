@@ -19,11 +19,11 @@ namespace TeamSelectionLibrary
                     lijnen.Add(input);
                 }
             }
-
             return lijnen;
+        }
 
-
-
+    }
+}
             //try
             //{
             //    // een bestand inlezen. 
@@ -40,7 +40,3 @@ namespace TeamSelectionLibrary
             //    // foutieve melding             
             //    this.melding = $"Kan het bestand {this.source} niet inlezen.\nFoutmelding {e.Message}.";
             //}
-        }
-
-    }
-}

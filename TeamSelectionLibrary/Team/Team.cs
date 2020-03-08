@@ -22,17 +22,19 @@ namespace TeamSelectionLibrary
             if (!Spelers.Contains(speler))
             {
                 Spelers.Add(speler);
-                //speler.Team = this;
+                speler.Team = this;
             }
             else throw new ArgumentException($"Deze speler bevindt zich al in het team: {speler}");
 
         }
         public void VerwijderSpeler(Speler speler)
         {
-            //Testen of de speler wel echt in het team zit. 
-            //hetzelfde: exception throwen als de speler niet tot een team toebehoort.
-            Spelers.Remove(speler);
-            speler.Team = null;
+            if (speler.Team == this)
+            {
+                Spelers.Remove(speler);
+                speler.Team = null;
+            }
+            else throw new ArgumentException($" {speler.Naam} behoort niet tot dit team");
         }
 
     }

@@ -15,7 +15,7 @@ namespace TeamSelectionLibrary
             if (ReferenceEquals(x, null)) return -1;
             if (ReferenceEquals(y, null)) return 1;
 
-            return x.Rating.CompareTo(y.Rating);
+            return -(x.Rating.CompareTo(y.Rating));
         }
 
         public override IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; } = new AanvoerderHoogsteCaps();

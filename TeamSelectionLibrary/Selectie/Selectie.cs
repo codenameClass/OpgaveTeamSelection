@@ -44,6 +44,9 @@ namespace TeamSelectionLibrary
             Console.WriteLine("************************************************");
             Console.WriteLine();
         }
+    }
+}
+
         //public void PrintSelectie()
         //{
         //    foreach (Defender defender in Defenders)
@@ -85,5 +88,3 @@ namespace TeamSelectionLibrary
         //    }
         //    else Console.WriteLine(GoalKeeper[0]);
         //}
-    }
-}
