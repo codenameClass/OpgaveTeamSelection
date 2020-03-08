@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TeamSelectionLibrary
 {
-    interface IPlayerFactory
+    public interface IPlayerFactory
     {
         Speler MaakSpeler(string spelerInfo);
     }
