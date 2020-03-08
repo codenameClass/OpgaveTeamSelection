@@ -38,8 +38,8 @@ namespace OpgaveTeamSelection
 
             //Test 2
             Console.WriteLine("\n\n\ntest2");
-            var testje = team.Spelers.OrderBy(s => s, new JIRatingComparer()).ToList();
-            foreach (var t in testje) Console.WriteLine(t);
+            var testje2 = team.Spelers.OrderBy(s => s, new JIRatingComparer()).ToList();
+            foreach (var t in testje2) Console.WriteLine(t);
 
         }
     }
