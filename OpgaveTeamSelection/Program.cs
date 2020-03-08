@@ -8,21 +8,16 @@ namespace OpgaveTeamSelection
 {
     public class Program
     {
-
-        static string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\rodeDuivels.txt"); // Solution (werkt voor iedereen)
-        //static string path = @"C:\Users\jensi\source\repos\OpgaveTeamSelectionMain\OpgaveTeamSelection\Resources\rodeDuivels.txt";      // Jens solution locatie
-        //static string path = @"D:\Programmeren Data en Bestanden\rodeDuivels.txt";                                                      // Sven desktop locatie
-        //static string path = @"D:\Programmeren Data en Bestanden\rodeDuivels.txt";                                                      // Sven laptop locatie
-        //static string path = @"C:\Users\Sieglinde\OneDrive\voetbal\rodeDuivels.txt"                                                     // Sieglinde locatie 
+        static string PATH = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Resources\rodeDuivels.txt");
 
         static void Main(string[] args)
         {
             //Load
             try
             {
-                if (File.Exists(path))
+                if (File.Exists(PATH))
                 {
-                    List<string> lijnen = FileProcessor.ReadFile(path);
+                    List<string> lijnen = FileProcessor.ReadFile(PATH);
 
                     //Create
                     Team team = new Team() { TeamNaam = "Rode Duivels" };
@@ -45,26 +40,12 @@ namespace OpgaveTeamSelection
             catch (SpelerinfoException e)
             {
                 Console.WriteLine(e.Message);
-                foreach (KeyValuePair<string, bool> entry in e.Logs)
-                {
-                    Console.WriteLine($"{entry.Key}: {entry.Value} ");
-                }
+                foreach (KeyValuePair<string, bool> entry in e.Logs) Console.WriteLine($"{entry.Key}: {entry.Value} ");
             }
             catch (ArgumentException e)
             {
                 Console.WriteLine(e.Message);
             }
-
-
-            ////Test 1
-            //Console.WriteLine("\n\n\ntest1");
-            //var testje = team.Spelers.OrderBy(s => s, new JICapsComparer()).ToList();
-            //foreach (var t in testje) Console.WriteLine(t);
-
-            ////Test 2
-            //Console.WriteLine("\n\n\ntest2");
-            //var testje2 = team.Spelers.OrderBy(s => s, new JIRatingComparer()).ToList();
-            //foreach (var t in testje2) Console.WriteLine(t);
 
         }
     }
