@@ -21,7 +21,7 @@ namespace OpgaveTeamSelection
 
             //Create
             Team team = new Team() { TeamNaam = "Rode Duivels" };
-            IPlayerFactory pf = new PlayerFactory(team);
+            IPlayerFactory pf = new PlayerFactory();
 
             //Read
             foreach(string lijn in lijnen) team.VoegSpelerToe(pf.MaakSpeler(lijn));

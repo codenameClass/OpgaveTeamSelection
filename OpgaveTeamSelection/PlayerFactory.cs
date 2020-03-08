@@ -7,10 +7,6 @@ namespace OpgaveTeamSelection
 {
     public class PlayerFactory : IPlayerFactory
     {
-        public Team Team { get; set; }
-
-        public PlayerFactory(Team team) => Team = team;
-
         public Speler MaakSpeler(string spelerInfo)
         {
             //Parameter check

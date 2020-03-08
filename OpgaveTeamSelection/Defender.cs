@@ -16,7 +16,7 @@ namespace OpgaveTeamSelection
             string temp = "";
             foreach (DefenderPosities entry in MogenlijkePosities)
             {
-                temp += entry + ",";
+                temp += entry + " ";
             }
             return ($"{this.GetType().Name} - {Naam},{RugNummer} [Positions:{temp}] - Rating {Rating}, Caps {Caps}");
         }

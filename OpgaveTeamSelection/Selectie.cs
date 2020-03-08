@@ -27,44 +27,57 @@ namespace OpgaveTeamSelection
         
         public void PrintSelectie()
         {
-            foreach (Defender defender in Defenders)
+            foreach(Speler s in GeselecteerdeSpelers)
             {
-                if(defender == Aanvoerder)
-                {
-                    Console.ForegroundColor= ConsoleColor.Blue;
-                    Console.WriteLine(defender);
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
-                else Console.WriteLine(defender);
-            }
-            foreach(MidFielder midfielder in MidFielders)
-            {
-                if (midfielder == Aanvoerder)
+                if(s == Aanvoerder)
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine(midfielder);
+                    Console.WriteLine(s);
                     Console.ForegroundColor = ConsoleColor.White;
                 }
-                else Console.WriteLine(midfielder);
+                else Console.WriteLine(s);
             }
-            foreach(Forward forward in Forwards)
-            {
-                if(forward == Aanvoerder)
-                {
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine(forward);
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
-                else Console.WriteLine(forward);
-
-            }
-            if (GoalKeeper[0] == Aanvoerder)
-            {
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine(GoalKeeper[0]);
-                Console.ForegroundColor = ConsoleColor.White;
-            }
-            else Console.WriteLine(GoalKeeper[0]);
         }
+        //public void PrintSelectie()
+        //{
+        //    foreach (Defender defender in Defenders)
+        //    {
+        //        if(defender == Aanvoerder)
+        //        {
+        //            Console.ForegroundColor= ConsoleColor.Blue;
+        //            Console.WriteLine(defender);
+        //            Console.ForegroundColor = ConsoleColor.White;
+        //        }
+        //        else Console.WriteLine(defender);
+        //    }
+        //    foreach(MidFielder midfielder in MidFielders)
+        //    {
+        //        if (midfielder == Aanvoerder)
+        //        {
+        //            Console.ForegroundColor = ConsoleColor.Blue;
+        //            Console.WriteLine(midfielder);
+        //            Console.ForegroundColor = ConsoleColor.White;
+        //        }
+        //        else Console.WriteLine(midfielder);
+        //    }
+        //    foreach(Forward forward in Forwards)
+        //    {
+        //        if(forward == Aanvoerder)
+        //        {
+        //            Console.ForegroundColor = ConsoleColor.Blue;
+        //            Console.WriteLine(forward);
+        //            Console.ForegroundColor = ConsoleColor.White;
+        //        }
+        //        else Console.WriteLine(forward);
+
+        //    }
+        //    if (GoalKeeper[0] == Aanvoerder)
+        //    {
+        //        Console.ForegroundColor = ConsoleColor.Blue;
+        //        Console.WriteLine(GoalKeeper[0]);
+        //        Console.ForegroundColor = ConsoleColor.White;
+        //    }
+        //    else Console.WriteLine(GoalKeeper[0]);
+        //}
     }
 }
