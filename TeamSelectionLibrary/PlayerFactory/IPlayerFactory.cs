@@ -4,8 +4,8 @@ using System.Text;
 
 namespace TeamSelectionLibrary
 {
-    public interface IPlayerFactory
+    interface IPlayerFactory
     {
-        public Speler MaakSpeler(string spelerInfo);
+        Speler MaakSpeler(string spelerInfo);
     }
 }

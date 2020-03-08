@@ -4,8 +4,8 @@ using System.Text;
 
 namespace TeamSelectionLibrary
 {
-    public interface IAanvoerderVoorwaarde
+    interface IAanvoerderVoorwaarde
     {
-        public Speler SelectAanvoerder(List<Speler> spelers);
+        Speler SelectAanvoerder(List<Speler> spelers);
     }
 }
