@@ -16,20 +16,6 @@
     </TypeIdentifier>
     <Lollipop Position="0.1" Collapsed="true" />
   </Class>
-  <Class Name="TeamSelectionLibrary.JICapsComparer">
-    <Position X="12" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
-      <FileName>Comparers\JICapsComparer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TeamSelectionLibrary.JIRatingComparer">
-    <Position X="13.5" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
-      <FileName>Comparers\JIRatingComparer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="TeamSelectionLibrary.SpelerinfoException">
     <Position X="9.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -55,7 +41,7 @@
   <Class Name="TeamSelectionLibrary.Selectie">
     <Position X="6.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAgRiEAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEIAAAAAAAAAAAAAgRiEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Selectie\Selectie.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -159,13 +145,6 @@
       <FileName>AanvoerderVoorwaarden\IAanvoerderVoorwaarde.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="TeamSelectionLibrary.IDataReader">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FileProcessor\IDataReader.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="TeamSelectionLibrary.IPlayerFactory">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -176,7 +155,7 @@
   <Interface Name="TeamSelectionLibrary.ISpeler">
     <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Spelers\ISpeler.cs</FileName>
     </TypeIdentifier>
   </Interface>
