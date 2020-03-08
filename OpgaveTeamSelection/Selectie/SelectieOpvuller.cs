@@ -7,27 +7,12 @@ namespace OpgaveTeamSelection
 {
     public class SelectieOpvuller
     {
-        public static Selectie VulSelectieOp(int aantalDefenders, int aantalMidfielders, int aantalForwards, List<Speler> spelers, IStrategie strategie)
+        public static Selectie VulSelectieOp(int aantalDefenders, int aantalMidfielders, int aantalForwards, List<Speler> spelers, Strategie strategie)
         {
-            SorteerOpStrategie(spelers, strategie);
+            spelers.Sort(strategie);
             List<Speler> geselecteerdeSpelers = GetGeselecteerdeSpelers(aantalDefenders, aantalMidfielders, aantalForwards, spelers);
 
             return new Selectie(geselecteerdeSpelers, strategie.AanvoerderVoorwaarde.SelectAanvoerder(geselecteerdeSpelers));
-        }
-        private static void SorteerOpStrategie(List<Speler> spelers, IStrategie strategie)
-        {
-            for (int x = 0; x < spelers.Count - 1; x++)
-            {
-                int ind = x;
-                for (int i = x + 1; i < spelers.Count; i++)
-                {
-                    if (strategie.ZoekVoorwaarde(spelers[ind], spelers[i]))
-                        ind = i;
-                }
-                Speler tussenwaarde = spelers[x];
-                spelers[x] = spelers[ind];
-                spelers[ind] = tussenwaarde;
-            }
         }
         private static List<Speler> GetGeselecteerdeSpelers(int aantalDefenders, int aantalMidfielders, int aantalForwards, List<Speler> spelers)
         {

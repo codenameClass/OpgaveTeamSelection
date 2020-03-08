@@ -1,15 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    public class BestStrategie : IStrategie
+    public class BestStrategie : Strategie
     {
-        public bool ZoekVoorwaarde(Speler huidige, Speler vergelijking)
+        public override int Compare(Speler x, Speler y)
         {
-            return (huidige.Rating < vergelijking.Rating);
+            //Null is gelijk aan null...
+            if (ReferenceEquals(x, null) && ReferenceEquals(y, null)) return 0;
+
+            //Alles is groter dan null...
+            if (ReferenceEquals(x, null)) return -1;
+            if (ReferenceEquals(y, null)) return 1;
+
+            return x.Rating.CompareTo(y.Rating);
         }
-        public IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; } = new AanvoerderHoogsteRating();
+
+        public override IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; } = new AanvoerderHoogsteRating();
     }
 }

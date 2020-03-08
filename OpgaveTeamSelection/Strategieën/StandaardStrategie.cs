@@ -4,13 +4,20 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    public class StandaardStrategie : IStrategie
+    public class StandaardStrategie : Strategie
     {
-        public bool ZoekVoorwaarde(Speler huidige, Speler vergelijking)
+        public override int Compare(Speler x, Speler y)
         {
-            return (huidige.Caps < vergelijking.Caps);
+            //Null is gelijk aan null...
+            if (ReferenceEquals(x, null) && ReferenceEquals(y, null)) return 0;
+
+            //Alles is groter dan null...
+            if (ReferenceEquals(x, null)) return -1;
+            if (ReferenceEquals(y, null)) return 1;
+
+            return x.Rating.CompareTo(y.Rating);
         }
 
-        public IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; } = new AanvoerderHoogsteCaps();
+        public override IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; } = new AanvoerderHoogsteCaps();
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpgaveTeamSelection
 {
-    public abstract class Strategie2 : Comparer<Speler>
+    public abstract class Strategie : Comparer<Speler>
     {
         public abstract IAanvoerderVoorwaarde AanvoerderVoorwaarde { get; set; }
 
