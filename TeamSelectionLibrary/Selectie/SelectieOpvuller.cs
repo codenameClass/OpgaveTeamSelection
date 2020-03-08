@@ -11,8 +11,11 @@ namespace TeamSelectionLibrary
         {
             spelers.Sort(strategie);
             List<Speler> geselecteerdeSpelers = GetGeselecteerdeSpelers(aantalDefenders, aantalMidfielders, aantalForwards, spelers);
+            
+            Selectie selectie = new Selectie(geselecteerdeSpelers, strategie.AanvoerderVoorwaarde.SelectAanvoerder(geselecteerdeSpelers));
+            selectie.Strategie = strategie;
 
-            return new Selectie(geselecteerdeSpelers, strategie.AanvoerderVoorwaarde.SelectAanvoerder(geselecteerdeSpelers));
+            return selectie;
         }
         private static List<Speler> GetGeselecteerdeSpelers(int aantalDefenders, int aantalMidfielders, int aantalForwards, List<Speler> spelers)
         {

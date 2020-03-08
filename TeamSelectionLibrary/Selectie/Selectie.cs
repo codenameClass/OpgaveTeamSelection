@@ -13,6 +13,7 @@ namespace TeamSelectionLibrary
         public List<MidFielder> MidFielders { get; set; }
         public List<Forward> Forwards { get; set; }
         public List<GoalKeeper> GoalKeeper { get; set; }
+        public Strategie Strategie { get; set; }
 
         public Selectie(List<Speler> geselecteerdeSpelers, Speler aanvoerder)
         {
@@ -29,6 +30,7 @@ namespace TeamSelectionLibrary
         {
             Console.WriteLine();
             Console.WriteLine("************************************************");
+            Console.WriteLine($"Strategie: {this.Strategie}");
             foreach(Speler s in GeselecteerdeSpelers)
             {
                 if(s == Aanvoerder)
