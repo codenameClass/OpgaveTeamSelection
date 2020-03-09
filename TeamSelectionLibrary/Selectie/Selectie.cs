@@ -30,7 +30,6 @@ namespace TeamSelectionLibrary
         {
             Console.WriteLine();
             Console.WriteLine("************************************************");
-            Console.WriteLine($"Strategie: {this.Strategie}");
             foreach(Speler s in GeselecteerdeSpelers)
             {
                 if(s == Aanvoerder)
