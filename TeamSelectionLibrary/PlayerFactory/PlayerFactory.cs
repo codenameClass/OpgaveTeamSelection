@@ -75,7 +75,7 @@ namespace TeamSelectionLibrary
                     else
                     {
                         validationLogs.Add("playerTypeValidation", false);
-                        validationLogs.Add("positionValidation", false);
+                        throw new Exception();
                     }
                 }   
                 catch (Exception e)
