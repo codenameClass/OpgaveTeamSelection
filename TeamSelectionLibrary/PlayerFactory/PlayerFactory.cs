@@ -9,9 +9,6 @@ namespace TeamSelectionLibrary
     {
         public Speler MaakSpeler(string spelerInfo)
         {
-            //Parameter check
-            //if (spelerInfo == null) throw Exception("spelerInfo is null");
-
             //Setup
             string[] data = spelerInfo.Split(',');
             string playerType = data[0];
